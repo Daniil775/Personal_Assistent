@@ -44,6 +44,7 @@ body{
     flex-direction: column;
     gap: 20px;
     animation: fadeOut 2s 1;
+    background-color: black;
 }
 #message,#name{
     background: none;
@@ -119,6 +120,104 @@ body{
         opacity: 1;
     }
 
+}
+
+#start{
+    position: fixed;
+    width: 150px;
+    height: 50px;
+    left: calc(50% - 75px);
+    top: calc(50% - 25px);
+    color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background: rgb(255, 173, 21);
+    transition: all .2s ease;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#start:hover{
+    background-color: rgb(255, 98, 40);
+    transform: scale(1.1);
+    color: rgb(255, 255, 255);
+}
+.design{
+    position: absolute;
+    left: calc(50% - 150px);
+    top: calc(50% - 150px);
+    width: 300px;
+    height: 300px;
+    background: teal;
+    border-radius: 20px 120px 50px 200px;
+    z-index: -1;
+    filter: blur(50px);
+    animation: grad 10s infinite linear;
+}
+
+#test{
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    display: flex;
+    background: linear-gradient(120deg, rgb(109, 109, 109), black, rgb(187, 121, 0));
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    position: fixed;
+    left: calc(50% - 250px);
+    top: calc(50% - 250px);
+}
+
+#test input{
+    width: 250px;
+    height: 50px;
+    border-radius:10px;
+    background: none;
+    border: 1px solid orangered;
+    text-align: center;
+    outline: none;
+    color: black;
+}
+#send-form{
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+}
+
+@keyframes grad{
+    0%{
+        border-radius: 20px 120px 50px 200px;
+        transform: translate(0 , 0);
+        
+    }
+    25%{
+        border-radius: 30px 150px 130px 180px;
+        transform: translate(20 , -20);
+        background: red;
+    }
+    50%{
+        border-radius: 70px 250px 70px 150px;
+        transform: translate(0px , 20px);
+        background: purple;
+    }
+    75%{
+        border-radius: 40px 130px 150px 300px;
+        transform: translate(-20px , 10px);
+        background: blue;
+    }
+    100%{
+        border-radius: 20px 120px 50px 200px;
+        transform: translate(0 , 0);
+        background: teal;
+    }
 }
 
 @media screen and (max-width:470px){
